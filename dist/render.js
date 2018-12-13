@@ -1,6 +1,6 @@
 class Renderer{
     constructor(){
-            // Create a new class for your Renderer
+        // Create a new class for your Renderer
         // Add a render method to the class for rendering ingredients
         // This method should receive one parameter: data
         // It should then use Handlebars to render the data on the page
