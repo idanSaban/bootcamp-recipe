@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/',api)
 
 
-const port = 3000
+const port = 8080
 app.listen(port, function () {
     console.log(`Running server on port ${port}`)
 })

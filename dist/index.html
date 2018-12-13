@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>NBA PLAYERS</title>
+    <title>bootcamp-recipe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Kanit:500|Work+Sans:300" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
@@ -14,10 +14,33 @@
 </head>
 
 <body>
-    <script id="players-template" type="text/x-handlebars-template">
-      </script>
+    <div id="main-contianer">
+        <div id="input-container">
+            <input type="text" id="food-input" placeholder="food"><input type="text" id="ingredient-input" placeholder="ingredient">
+            <button id="search">Search!</button>
+        </div>
+
+        <div id="recipes-container"></div>
+
+    </div>
+
+    <script id="recipes-template" type="text/x-handlebars-template">
+        {{#each data}}
+        <div class="recipe">
+            <div class="top">
+                <a class="title" href="{{href}}" target="_blank"><h3>{{title}}</h3></a>
+                <img src="{{thumbnail}}">
+            </div>
+            <ul>
+                {{#each ingredients}}
+                    <li>{{name}} </li>
+                {{/each}}
+            </ul>
+
+        </div>  
+        {{/each}}
+    </script>
     <script src="render.js"></script>
-    <script src="API-manager.js"></script>
     <script src="main.js"></script>
 </body>
 
